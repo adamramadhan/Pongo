@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block jscss %}
+    {% for js in showjs %}
+        {{ js|raw }}
+    {% endfor %}
+{% endblock %}
+
+{% set active = 'homepage' %}
+
+{% block content %}
+    {{ data|raw }}
+{% endblock %}

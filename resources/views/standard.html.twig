@@ -1,0 +1,40 @@
+<html>
+    <head>
+    {% block head %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.0-beta.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}/assets/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}/assets/css/map.css" />
+        <link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}/assets/css/bootstrap-responsive.css">
+        <link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}/assets/css/map.css" />
+
+        <script type="text/javascript" src="{{ app.request.basepath }}/assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ app.request.basepath }}/assets/js/raphael.min.js"></script>
+        <script type="text/javascript" src="{{ app.request.basepath }}/assets/js/chroma.min.js"></script>
+        <script type="text/javascript" src="{{ app.request.basepath }}/assets/js/kartograph.js"></script>
+    {% endblock %}
+    </head>
+    <body style="height: 100%">
+         <div class="navbar navbar-fixed-top" id="menu">
+          <div class="navbar-inner">
+            <div class="container">
+              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+              <a class="brand" href="{{ path('homepage') }}">Long Live Pongo</a>
+              <div class="nav-collapse">
+                <ul class="nav">
+                  <li><a href="{{ path('propagation') }}">Orangutan Propagation</a></li>
+                  <li><a href="{{ path('facts') }}">Orangutan Facts</a></li>
+                </ul>
+              </div><!--/.nav-collapse -->
+            </div>
+          </div>
+        </div>      
+    {% block content %}
+    {% endblock %}
+    </body>
+</html>
